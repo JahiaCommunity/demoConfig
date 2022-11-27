@@ -16,8 +16,26 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
-<%
-DemoConfigService helloConfig = new DemoConfigServiceImpl();
-String hello = helloConfig.helloWordConfig();
-out.print("<h1>"+hello+"</h1>");
-%>
+
+<c:url var="actionUrl" value="${url.base}${currentNode.path}.demoConfigServiceAction.do" />
+
+<template:addResources>
+	<script>
+		$(document).ready(function(){
+			$("#triggerAction").click(function(){
+				$.ajax({
+					  method: "POST",
+					  url: "${actionUrl}",
+					  dataType: "json"
+					}).done(function( msg ) {
+					    alert( "Data Saved: " + msg );
+					});
+				});
+		});
+	</script>
+</template:addResources>
+
+<div id="triggerAction" style="cursor: pointer;">Click Me !</div>
+<br>
+<br>
+<a href="${actionUrl}" target="_blank">LINK</a>

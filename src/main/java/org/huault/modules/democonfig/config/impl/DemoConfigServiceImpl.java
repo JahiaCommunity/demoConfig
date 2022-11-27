@@ -28,6 +28,7 @@ public class DemoConfigServiceImpl implements DemoConfigService {
 
 	@Override
 	public String helloWordConfig() {
+		logger.info("Calling helloWordConfig {}", helloWordConfig );
 		return helloWordConfig;
 	}
 
