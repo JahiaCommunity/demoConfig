@@ -57,7 +57,7 @@
     <groupId>org.huault.modules</groupId>
     <artifactId>demoConfig</artifactId>
     <name>Demo Config</name>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>bundle</packaging>
     <description>This is the custom module (Demo Config) for running on a Jahia server.</description>
 

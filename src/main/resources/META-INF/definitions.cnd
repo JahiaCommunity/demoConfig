@@ -1,2 +1,4 @@
-<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
-<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<hnt = 'http://www.huault.org/jahia/nt/1.0'>
+<hmix = 'http://www.huault.org/jahia/mix/1.0'>
+
+[hnt:helloConfig] > jnt:content, jmix:basicContent, jmix:editorialContent
